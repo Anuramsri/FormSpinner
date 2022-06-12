@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form>
+            <div class="user-box">
+                <input type="text" name="" required>
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required>
+                <label>Password</label>
+            </div>
+            <div class="subBtn" onclick="spinner()">
+                <span class="spin"></span>
+                <span class="spin"></span>
+                <span class="spin"></span>
+                <span class="spin"></span>
+                Submit
+            </div>
+        </form>
+    </div>
+    <div class="loader">
+        <div class="loading">
+        </div>
+      </div>
+    <script type="text/javascript">
+        function spinner() {
+            setTimeout(() => {
+                document.getElementsByClassName("spin")[0].style.display = "block";
+                document.getElementsByClassName("spin")[1].style.display = "block";
+                document.getElementsByClassName("spin")[2].style.display = "block";
+                document.getElementsByClassName("spin")[3].style.display = "block";             
+            }, 500);
+            setTimeout(() => {
+                document.getElementsByClassName("login-box")[0].style.display="none";
+            }, 3000);
+            document.getElementsByClassName("spin")[0].style.display = "none";
+        }
+    </script>
+</body>
+</html>
